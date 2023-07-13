@@ -52,7 +52,7 @@ export default function CreateNFT() {
         <div className="mb-6 grid grid-cols-3 gap-12 sm:mb-10">
           <div className="col-span-3 flex items-center justify-between lg:col-span-2">
             <h2 className="text-lg font-medium uppercase tracking-wider text-gray-900 dark:text-white  sm:text-2xl">
-              Create New Item
+              Create New Project
             </h2>
             <Preview />
           </div>
@@ -130,21 +130,32 @@ export default function CreateNFT() {
           </div>
         </div>
 
+        {/* Explicit content */}
+        <div className="mb-8">
+          <ToggleBar
+            title="Mint ERC20"
+            subTitle="Be identified by country search. (recommended for potential partners)"
+            icon={<Warning />}
+            checked={explicit}
+            onChange={() => setExplicit(!explicit)}
+          />
+        </div>
+
         {/* Price */}
         <div className="mb-8">
-          <InputLabel title="Price" important />
+          <InputLabel title="Pre Mint- ERC20" important />
           <Input
             min={0}
             type="number"
-            placeholder="Enter your price"
+            placeholder="Pre Mint- ERC20 to represent the fees to bid and to create RFP"
             inputClassName="spin-button-hidden"
           />
         </div>
 
         {/* Name */}
         <div className="mb-8">
-          <InputLabel title="Name" important />
-          <Input type="text" placeholder="Item name" />
+          <InputLabel title="Project Name" important />
+          <Input type="text" placeholder="Project Name" />
         </div>
 
         {/* External link */}
@@ -168,7 +179,7 @@ export default function CreateNFT() {
         {/* Unlockable content */}
         <div className="mb-3">
           <ToggleBar
-            title="Unlockable Content"
+            title="Be identified by country search. (recommended for potential partners)"
             subTitle="Include unlockable content that can only be revealed by the owner of the item."
             icon={<Unlocked />}
             checked={unlocked}
@@ -178,17 +189,6 @@ export default function CreateNFT() {
               <Textarea placeholder="Enter content (access key, code to redeem, link to a file, etc.)" />
             )}
           </ToggleBar>
-        </div>
-
-        {/* Explicit content */}
-        <div className="mb-8">
-          <ToggleBar
-            title="Explicit &amp; Sensitive Content"
-            subTitle="Set this item as explicit and sensitive content"
-            icon={<Warning />}
-            checked={explicit}
-            onChange={() => setExplicit(!explicit)}
-          />
         </div>
 
         {/* Supply */}

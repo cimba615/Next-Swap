@@ -33,6 +33,7 @@ type NftDetailsProps = {
   collection: Avatar;
   owner: Avatar;
   block_chains: Avatar[];
+  stable_coin: Avatar[];
 };
 
 export default function NftDetails({ product }: { product: NftDetailsProps }) {
@@ -48,6 +49,7 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
     collection,
     owner,
     block_chains,
+    stable_coin,
   } = product;
 
   return (
@@ -85,7 +87,7 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
                 Minted on {minted_date}
                 <ArrowLinkIcon className="h-3 w-3 ltr:ml-2 rtl:mr-2" />
               </AnchorLink>
-              <div className="mt-4 flex flex-wrap gap-6 pt-0.5 lg:-mx-6 lg:mt-6 lg:gap-0">
+              <div className="mt-4 flex  gap-6 pt-0.5 lg:-mx-6 lg:mt-6 lg:gap-0">
                 <div className="shrink-0 border-dashed border-gray-200 dark:border-gray-700 lg:px-6 lg:ltr:border-r lg:rtl:border-l">
                   <h3 className="text-heading-style mb-2 uppercase text-gray-900 dark:text-white">
                     Created By
@@ -97,9 +99,9 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
                     />
                   </AnchorLink>
                 </div>
-                <div className="shrink-0 lg:px-6">
+                <div className="shrink-0 border-dashed border-gray-200 dark:border-gray-700 lg:px-6 lg:ltr:border-r lg:rtl:border-l">
                   <h3 className="text-heading-style mb-2.5 uppercase text-gray-900 dark:text-white">
-                    Collection
+                    Country
                   </h3>
                   <AnchorLink href="#" className="inline-flex">
                     <ListCard
@@ -107,6 +109,12 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
                       className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                     />
                   </AnchorLink>
+                </div>
+                <div className="shrink-0 lg:px-6">
+                  <h3 className="text-heading-style mb-2.5 uppercase text-gray-900 dark:text-white">
+                    Verified
+                  </h3>
+                  <AnchorLink href="#" className="inline-flex"></AnchorLink>
                 </div>
               </div>
             </div>
@@ -119,12 +127,20 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
                       path: 'details',
                     },
                     {
-                      title: 'Bids',
-                      path: 'bids',
+                      title: 'Whitepaper',
+                      path: 'whitepaper',
                     },
                     {
-                      title: 'History',
-                      path: 'history',
+                      title: 'Links',
+                      path: 'links',
+                    },
+                    {
+                      title: 'Video',
+                      path: 'video  ',
+                    },
+                    {
+                      title: 'Tokenomic',
+                      path: 'tokenomic',
                     },
                   ]}
                 >
@@ -155,6 +171,26 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
                         </h3>
                         <div className="flex flex-col gap-2">
                           {block_chains?.map((item: any) => (
+                            <AnchorLink
+                              href="#"
+                              className="inline-flex"
+                              key={item?.id}
+                            >
+                              <ListCard
+                                item={item}
+                                className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                              />
+                            </AnchorLink>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="block">
+                        <h3 className="text-heading-style mb-2 uppercase text-gray-900 dark:text-white">
+                          Escrow Stable Coin
+                        </h3>
+                        <div className="flex flex-col gap-2">
+                          {stable_coin?.map((item: any) => (
                             <AnchorLink
                               href="#"
                               className="inline-flex"

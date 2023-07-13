@@ -29,11 +29,14 @@ export default function NftFooter({
         className
       )}
     >
-      <div className="-mx-4 border-t-2 border-gray-900 px-4 pt-4 pb-5 dark:border-gray-700 sm:-mx-6 sm:px-6 md:mx-2 md:px-0 md:pt-5 lg:pt-6 lg:pb-7">
+      <div className="-mx-4 border-t-2 border-gray-900 px-4 pb-5 pt-4 dark:border-gray-700 sm:-mx-6 sm:px-6 md:mx-2 md:px-0 md:pt-5 lg:pb-7 lg:pt-6">
         {isAuction && (
           <div className="flex gap-4 pb-3.5 md:pb-4 xl:gap-5">
-            <div className="block w-1/2 shrink-0 md:w-2/5">
-              <h3 className="mb-1 truncate text-13px font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-1.5 sm:text-sm">
+            <div
+              className="block w-1/2 shrink-0 md:w-2/5"
+              style={{ display: 'flex', justifyContent: 'center' }}
+            >
+              {/* <h3 className="mb-1 truncate text-13px font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-1.5 sm:text-sm">
                 Current bid <span className="md:hidden">by</span>{' '}
                 <AnchorLink
                   href={currentBid?.authorSlug ?? '#'}
@@ -53,20 +56,29 @@ export default function NftFooter({
                   <Image src={Avatar1} alt="avatar" width={24} height={24} />
                 </div>
                 @{currentBid?.name}
-              </AnchorLink>
+              </AnchorLink> */}
+              <div className="text-lg font-medium -tracking-wider md:text-xl xl:text-2xl">
+                W13
+              </div>
             </div>
             <div className="block w-1/2 shrink-0 md:w-3/5">
-              <h3 className="mb-1 truncate text-13px font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-1.5 sm:text-sm">
+              {/* <h3 className="mb-1 truncate text-13px font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-1.5 sm:text-sm">
                 Auction ends in
               </h3>
-              <AuctionCountdown date={auctionTime} />
+              <AuctionCountdown date={auctionTime} /> */}
+              <div className="text-lg font-medium -tracking-wider md:text-xl xl:text-2xl">
+                Max Supply
+              </div>
+              <div className="text-lg font-medium -tracking-wider md:text-xl xl:text-2xl">
+                120,000,000
+              </div>
             </div>
           </div>
         )}
 
         <div className="grid grid-cols-2 gap-3">
           <Button shape="rounded">
-            {isAuction ? 'PLACE A BID' : `BUY FOR ${price} ETH`}
+            {isAuction ? 'BUY Token' : `BUY FOR ${price} ETH`}
           </Button>
           <Button
             shape="rounded"

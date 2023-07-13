@@ -17,7 +17,7 @@ export const menuItems = [
     href: routes.home,
   },
   {
-    name: 'Live Pricing',
+    name: 'Projects Tokenomics',
     icon: <LivePricing />,
     href: routes.livePricing,
   },
@@ -32,29 +32,51 @@ export const menuItems = [
     href: routes.swap,
   },
   {
-    name: 'Liquidity',
+    name: 'Buy BTRT',
     icon: <PoolIcon />,
     href: routes.liquidity,
   },
   {
-    name: 'NFTs',
+    name: 'Projects',
     icon: <CompassIcon />,
     href: routes.search,
     dropdownItems: [
       {
-        name: 'Explore NFTs',
+        name: 'Explore Projects',
         icon: <CompassIcon />,
         href: routes.search,
       },
       {
-        name: 'Create NFT',
+        name: 'Create Project',
         icon: <PlusCircle />,
         href: routes.createNft,
       },
       {
-        name: 'NFT Details',
+        name: 'Project Details',
         icon: <DiskIcon />,
         href: routes.nftDetails,
+      },
+    ],
+  },
+  {
+    name: 'BitRegalo Partners',
+    icon: <CompassIcon />,
+    // href: routes.search,
+    dropdownItems: [
+      {
+        name: 'Explore Partners',
+        icon: <CompassIcon />,
+        // href: routes.search,
+      },
+      {
+        name: 'Become a Partners',
+        icon: <PlusCircle />,
+        // href: routes.createNft,
+      },
+      {
+        name: 'KYC Registry',
+        icon: <DiskIcon />,
+        // href: routes.nftDetails,
       },
     ],
   },

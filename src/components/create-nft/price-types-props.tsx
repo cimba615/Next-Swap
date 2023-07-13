@@ -5,16 +5,22 @@ import { TagIcon } from '@/components/icons/tag-icon';
 
 const PriceOptions = [
   {
+    title: 'Create Project',
+    description: 'NFT+Username+KYC',
     name: 'Fixed price',
     value: 'fixed',
     icon: <TagIcon className="h-5 w-5 sm:h-auto sm:w-auto" />,
   },
   {
+    title: 'General F1.',
+    description: 'Project, RFP, Escrow',
     name: 'Open for bids',
     value: 'bids',
     icon: <LoopIcon className="h-5 w-5 sm:h-auto sm:w-auto" />,
   },
   {
+    title: 'General F1.+DAO',
+    description: 'Project, RFP, Escrow, Utility, Voting',
     name: 'Timed auction',
     value: 'auction',
     icon: <SandClock className="h-5 w-5 sm:h-auto sm:w-auto" />,
@@ -42,8 +48,8 @@ export default function PriceType({ value, onChange }: PriceTypeProps) {
               }`}
             >
               <span className="relative flex h-28 flex-col items-center justify-center gap-3 px-2 text-center text-xs uppercase sm:h-36 sm:gap-4 sm:text-sm">
-                {item.icon}
-                {item.name}
+                <div style={{ fontSize: '20px' }}> {item.title} </div>
+                {item.description}
               </span>
             </span>
           )}

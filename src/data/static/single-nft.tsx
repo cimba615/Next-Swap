@@ -8,6 +8,7 @@ import Avatar3 from '@/assets/images/avatar/3.png';
 import Avatar4 from '@/assets/images/avatar/4.png';
 import Avatar5 from '@/assets/images/avatar/5.png';
 import Avatar6 from '@/assets/images/avatar/6.png';
+import Avatar7 from '@/assets/images/avatar/flag.png';
 
 export const nftData = {
   isAuction: true,
@@ -19,12 +20,13 @@ export const nftData = {
   description:
     'Fisherian Runaways, Child of #48 Bat Veil & #42 Screw Nose. This mushroom is the result of the cross-breeding of two original one of a kind generative mushrooms donated back to the Fisherian Runaways project their generous owner.',
   creator: { id: 1, logo: Avatar1, name: '@Cameronwilliamson', slug: '#' },
-  collection: { id: 1, logo: Avatar3, name: 'Criptic', slug: '#' },
+  collection: { id: 1, logo: Avatar7, name: 'China', slug: '#' },
   owner: { id: 1, logo: Avatar4, name: '@williamson', slug: '#' },
   block_chains: [
     { id: 1, logo: Bitcoin, name: 'Ethereum', slug: '#' },
     { id: 2, logo: Ethereum, name: 'Bitcoin', slug: '#' },
   ],
+  stable_coin: [{ id: 1, logo: Bitcoin, name: 'USDT', slug: '#' }],
   bids: [
     {
       id: 1,
